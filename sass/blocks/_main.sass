@@ -1,0 +1,265 @@
+// Стили для header
+.header
+  padding: 30px 90px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 15px
+  &__logo
+    margin-right: 120px
+  &__nav
+    display: flex
+    align-items: center
+    transition: all 0.3s
+  &__btn
+    font-family: Poppins
+    padding: 5px 17px
+
+// Стили для nav  
+.nav
+  &__link
+    color: #000
+    font-size: 0.87rem
+    font-weight: 700
+    transition: all 0.3s
+    position: relative
+    &.drop-down
+      &::after
+        position: absolute
+        content: ""
+        border: 4px solid transparent
+        border-top: 4px solid #FE9563
+        right: -10px
+        bottom: 3px
+        transform: rotate(0deg)
+        transition: all 0.3s
+      &.active
+        &::after
+          transform: rotate(180deg)
+          bottom: 6px
+    &::before
+      content: ""
+      position: absolute
+      height: 2px
+      width: 0
+      background-color: #FE9563
+      left: 0
+      bottom: 0
+    &:hover
+      &::before
+        width: 100%
+
+  &__list
+    display: flex
+    &__li
+      position: relative
+      margin-right: 27px
+
+//Стили для выпадающего списка      
+.drop-down
+  &__list
+    position: absolute
+    left: -12px
+    min-width: 100px
+    width: fit-content
+    display: block
+    flex-direction: column
+    background-color: #BF8A71
+    border-bottom: 5px solid #FE9563
+    transition: all 0.4s ease
+    display: none
+    &.active
+      display: block
+    li
+      border-bottom: 1px solid #FE9563
+  &__link
+    display: block
+    width: 100%
+    padding: 8px 12px
+    border-left: 5px solid #BF8A71
+    transition: all 0.3s
+    &:hover
+      background-color: #B06846
+      border-left: 5px solid #FE9563
+
+//Стили для бургера
+.menu-burger
+  display: none
+  position: relative
+  width: 30px
+  height: 20px
+  cursor: pointer
+  outline: none
+  order: 4
+  &::before, &::after, span
+    position: absolute
+    width: 100%
+    background-color: #000
+    height: 2px
+    left: 0
+    transition: all 0.3s ease 0s
+  &::before
+    content: '',
+    top: 0
+  &::after
+    content: '',
+    bottom: 0
+  &.active
+    &::after
+      transform: rotate(-45deg)
+      bottom: 9px
+    &::before
+      transform: rotate(45deg)
+      top: 9px
+    span
+      transform: scale(0)
+  span
+    top: 9px
+
+//Стили для блока main
+.main
+  background: linear-gradient(#FFFBF0, #F7E6CC)
+  border-radius: 0 0 50% 50% / 0 0 170px 170px
+  box-shadow: 0px 5px 26px #DD8762
+  max-width: 1400px
+  margin-right: auto
+  margin-left: auto
+  &__wrap
+    padding-top: 60px
+    padding-bottom: 90px
+    background: url('../img/main/main-bg.png') no-repeat top center / contain
+  &__side
+    max-width: 450px
+  &__title
+    color: #455A64
+  &__text
+    margin-bottom: 25px
+  &__more
+    display: flex
+    margin-bottom: 20px
+  &__btn
+    margin-right: 10px
+    background-color: #455A64
+    border-color: #455A64
+    padding: 9px 25px
+    transition: all 0.3s
+    &:hover
+      background-color: #6793a6
+      border-color: #6793a6
+
+// Стили для списка преимуществ  
+.advantages
+  &__list
+    display: flex
+  &__item
+    font-size: 0.75rem
+    font-weight: bold
+    color: #455A64
+    position: relative
+    margin-right: 14px
+    &::after
+      content: ""
+      width: 2px
+      height: 90%
+      position: absolute
+      background-color: #FE9C69
+      right: -9px
+      top: 0
+    &:last-child
+      &:after
+        width: 0px
+    &.black
+      color: #000
+      font-size: 0.87rem
+      &::after
+        background-color: #000
+
+//Стили для ссылки на видео
+.video
+  display: flex
+  align-items: center
+  &__icon
+    margin-right: 6px
+  &__text
+    color: #455A64
+    font-size: 0.87rem
+    font-weight: 700
+
+//адаптив
+@media(max-width: 1200px)
+  .header
+    padding: 30px 30px 0
+    &__logo
+      margin-right: 70px
+
+@media(max-width: 967px)
+  .header
+    padding: 25px 15px 0
+    &__logo
+      margin-right: 30px
+
+@media(max-width: 768px)
+  .main
+    border-radius: 0
+    &__wrap
+      padding-top: 30px
+      padding-bottom: 50px
+    &__side
+      margin-bottom: 20px
+  .header
+    padding: 20px 50px 0
+    &__btn
+      position: absolute
+      right: 20%
+  .nav
+    &__list
+      flex-direction: column
+      position: absolute
+      right: 0
+      top: 60px
+      transition: all 0.3s ease 0s
+      display: none
+      z-index: 10
+      &.active
+        display: flex
+        width: 100%
+      &__li
+        background: linear-gradient(45deg, #E6B9A4, #B8866F)
+        margin-right: 0
+        border: 1px solid #E6B9A4
+        &:hover
+          filter: brightness(1.1)
+        &:last-child
+          border: none
+    &__link
+      width: 100%
+      display: block
+      width: 100%
+      text-align: center
+      font-size: 1.1rem
+      padding: 11px 0
+      &::before
+        height: 0
+      &.drop-down
+        &::after
+          right: 17px
+          bottom: 16px
+          border: 6px solid transparent
+          border-top: 6px solid #FE9563
+        &.active
+          &::after
+            bottom: 18px
+  .drop-down
+    &__list
+      position: inherit
+      width: 100%
+      left: 0
+      border-bottom: 0
+      li
+        text-align: center
+  .menu-burger
+    display: block
+
+@media(max-width: 576px)
+  .header
+    padding: 20px 0 0

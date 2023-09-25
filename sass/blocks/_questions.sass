@@ -1,0 +1,42 @@
+.questions
+  &__title
+    margin-bottom: 15px
+    max-width: 540px
+  &__subtitle
+    max-width: 567px
+    color: #000
+    margin-bottom: 44px
+  &__box
+    max-height: 500px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: 19px
+  &__item
+    margin-bottom: 18px
+  &__question
+    font-size: 1.125rem
+    color: #000
+    margin-bottom: 10px
+    max-width: 430px
+  &__answer
+    max-width: 446px
+  &__search
+    margin-top: 35px
+
+@media(max-width: 992px)
+  .questions
+    &__box
+      max-height: inherit
+      padding-left: 50px
+      align-items: flex-start
+    &__question
+      max-width: inherit
+    &__answer
+      max-width: inherit
+
+@media(max-width: 576px)
+  .questions
+    &__box
+      padding-left: 10px

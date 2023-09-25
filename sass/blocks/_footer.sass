@@ -1,0 +1,32 @@
+.footer
+  +gradient
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 25px 0
+    font-weight: 400
+    font-size: 0.83rem
+    color: #000
+  &__socials
+    display: flex
+    &__link
+      width: 28px
+      height: 28px
+      margin-right: 9px
+  &__contacts
+    display: flex
+    &__link
+      margin-right: 8px
+      display: flex
+      align-items: center
+    &__icon
+      display: inline-block
+      margin-right: 10px
+
+@media(max-width: 768px)
+  .footer
+    &__wrap
+      flex-direction: column-reverse
+    &__socials
+      margin: 15px 0

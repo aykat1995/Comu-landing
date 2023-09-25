@@ -1,0 +1,31 @@
+.keepfavour
+  &__wrap
+    padding: 70px 0
+    +bordered
+    +gradient
+  &__info
+    max-width: 450px
+    &__title
+      font-size: 2.375rem
+      margin-bottom: 15px
+      color: #424242
+    &__paragraph
+      margin-bottom: 13px
+      line-height: 126%
+      color: #424242
+
+@media(max-width: 992px)
+  .keepfavour
+    &__info
+      &__title
+        font-size: 2rem
+
+@media(max-width: 576px)
+  .keepfavour
+    &__info
+      &__title
+        font-size: 1.7rem
+      &__text
+        margin-bottom: 20px
+    &__wrap
+      padding: 40px 0

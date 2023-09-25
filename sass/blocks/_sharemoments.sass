@@ -1,0 +1,44 @@
+.sharemoments
+  position: relative
+  min-height: 780px
+  &__title
+    max-width: 600px
+  &__subtitle
+    max-width: 600px
+  &__wrap
+    padding: 0 120px
+    background: url('../img/sharemoments/sharemoments-bg.png') no-repeat bottom center
+    text-align: center
+  &__img
+    margin-bottom: 50px
+    width: 100%
+  &-advantages
+    &__list
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -50px
+
+@media(max-width: 1200px)
+  .sharemoments
+    &__wrap
+      padding: 0 80px
+
+@media(max-width: 992px)
+  .sharemoments
+    &__wrap
+      padding: 0 10px
+
+@media(max-width: 768px)
+  .sharemoments
+    min-height: 700px
+    &-advantages__list
+      bottom: 0
+
+@media(max-width: 576px)
+  .sharemoments
+    min-height: 600px
+    &__subtitle
+      margin-bottom: 20px
+    &-advantages__list
+      width: 65%

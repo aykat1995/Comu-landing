@@ -1,0 +1,207 @@
+@mixin bordered
+  border-radius: 44px
+  box-shadow: 5px 5px 13px #DD8762
+
+@mixin gradient
+  background: linear-gradient(-45deg, #F5F2EB, #F7E6CB)
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-size: 1rem
+a, button
+  cursor: pointer
+
+a
+  text-decoration: none
+  color: #000
+
+ul
+  list-style: none
+
+body
+  background-color: #FFFCF5
+  font-family: Poppins
+  font-weight: 500
+  font-size: 16px
+  color: #535359
+
+.container
+  max-width: 1190px
+  margin: 0 auto
+
+.section
+  margin-bottom: 115px
+  .linear
+    padding: 70px 100px
+.title
+  font-size: 2.6rem
+  font-weight: 700
+  color: #353642
+  line-height: 126%
+  margin-bottom: 15px
+  &.dark
+    color: #000
+  &.centre
+    display: block
+    margin-right: auto
+    margin-left: auto
+    text-align: center
+.subtitle
+  font-family: Roboto
+  font-weight: 500
+  color: #393939
+  line-height: 148%
+  &.centre
+    display: block
+    margin-right: auto
+    margin-left: auto
+    text-align: center
+
+.btn
+  color: #F3FCFF
+  font-size: 0.87rem
+  background-color: #FE9868
+  padding: 8px 25px
+  font-family: Roboto
+  font-weight: 700
+  border-radius: 5px
+  transition: all 0.3s
+  border: 2px solid #FE9868
+  &:hover
+    background-color: #2e8d4d
+    border-color: #2e8d4d
+  &.light
+    color: #000
+    background: transparent
+    border: 2px solid #FE9868
+    &:hover
+      background-color: #2e8d4d
+      border-color: #2e8d4d
+      color: #F3FCFF
+
+.logo
+  display: flex
+  align-items: center
+  &__img
+    display: inline-block
+    width: 27px
+    height: 25px
+    margin-right: 4px
+  &__text
+    font-family: Istokweb
+    font-weight: 700
+    font-size: 1.73rem
+    color: #323232
+    text-transform: uppercase
+
+// Универсальный класс для адаптива flex-блоков
+.flex-wrap
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .flex-side
+    flex-basis: 50%
+  &.padding-wrap
+    padding-left: 100px
+    padding-right: 80px
+
+// Элементы с колоннами
+.columns
+  display: flex
+  justify-content: space-between
+.column
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 40px 30px
+  +bordered
+  +gradient
+
+// Input
+.input
+  font-family: Poppins
+  font-size: 1rem
+  font-weight: 400
+  color: #8F8F8F
+  padding: 20px 0 20px 27px
+  border: 1px solid #FE9563
+  flex-basis: 80%
+  outline: none
+  border-radius: 16px 0 0 16px
+  &::placeholder
+    font-family: Poppins
+    font-weight: 400
+    font-size: 1rem
+  &-box
+    display: flex
+    border-radius: 16px 8px 8px 16px
+    overflow: hidden
+  &-btn
+    padding: 17px 60px
+    background-color: #FE9563
+    border: 1px solid #FE9563
+    flex-basis: 20%
+    font-family: Poppins
+    font-weight: 400
+    font-size: 1.25rem
+    color: #fff
+
+//Адаптив
+
+@media(max-width: 1200px)
+  .container
+    max-width: 990px
+  .column
+    padding: 30px 30px
+  .flex-wrap
+    &.padding-wrap
+      padding-left: 70px
+      padding-right: 60px
+  .section-img
+    width: 50%
+
+@media(max-width: 992px)
+  html
+    font-size: 15px
+  .container
+    max-width: 768px
+  .flex-wrap
+    &.padding-wrap
+      padding-left: 30px
+      padding-right: 30px
+  .title
+    font-size: 2rem
+
+@media(max-width: 768px)
+  .container
+    max-width: 90%
+  .flex-wrap
+    flex-direction: column
+  .columns
+    flex-direction: column
+    align-items: center
+  .column
+    padding: 25px 20px
+  .section
+    margin-bottom: 80px
+    &-img
+      width: 80%
+
+@media(max-width: 576px)
+  html
+    font-size: 14px
+  .title
+    font-size: 1.7rem
+  .input
+    padding: 12px 0 12px 20px
+    &-btn
+      padding: 12px 45px
+      font-size: 1rem
+  .flex-wrap
+    &.padding-wrap
+      padding-left: 10px
+      padding-right: 10px

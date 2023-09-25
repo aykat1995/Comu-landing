@@ -1,0 +1,32 @@
+.possibilities
+  +bordered
+  +gradient
+  padding: 135px 0
+  &__item
+    display: flex
+    margin-bottom: 18px
+  &__icon
+    display: inline-block
+    margin-right: 13px
+    width: 57px
+    height: 57px
+  &__title
+    font-size: 1.125rem
+    font-weight: 700
+    margin-bottom: 6px
+    max-width: 320px
+  &__text
+    max-width: 320px
+
+@media(max-width: 992px)
+  .possibilities
+    padding-top: 60px
+    padding-bottom: 60px
+
+@media(max-width: 576px)
+  .possibilities
+    padding-top: 40px
+    padding-bottom: 40px
+    &__icon
+      width: 40px
+      height: 40px

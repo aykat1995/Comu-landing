@@ -1,0 +1,48 @@
+.info
+  padding-bottom: 40px
+  &__logo
+    margin-bottom: 15px
+  &__left
+    flex: 1
+    &__text
+      margin-bottom: 15px
+      max-width: 303px
+  &__link
+    margin-right: 13px
+  &__right
+    flex: 2
+  &__nav
+    &-box
+      display: flex
+      justify-content: space-between
+      margin-bottom: 45px
+    &__title
+      font-size: 0.93rem
+      color: #000
+      font-weight: bold
+      margin-bottom: 14px
+    &__items
+      list-style: none
+      li
+        margin-bottom: 7px
+    &__link
+      font-size: 0.87rem
+      color: #393939
+      line-height: 153%
+  &__input
+    padding: 13px 17px
+    font-size: 0.65rem
+    &::placeholder
+      font-size: 0.65rem
+  &__btn
+    padding: 11px 40px
+    font-size: 0.86rem
+
+@media(max-width: 768px)
+  .info
+    &__left
+      margin-bottom: 30px
+      &__text
+        max-width: inherit
+    &__right
+      width: 100%
