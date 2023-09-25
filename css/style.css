@@ -107,7 +107,7 @@ body {
   color: #F3FCFF;
   font-size: 0.87rem;
   background-color: #FE9868;
-  padding: 8px 25px;
+  padding: 9px 26px;
   font-family: Roboto;
   font-weight: 700;
   border-radius: 5px;
@@ -253,6 +253,12 @@ body {
   font-weight: 400;
   font-size: 1.25rem;
   color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.input-btn:hover {
+  -webkit-filter: brightness(1.15);
+          filter: brightness(1.15);
 }
 
 @media (max-width: 1200px) {
@@ -498,7 +504,7 @@ body {
 .main {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFFBF0), to(#F7E6CC));
   background: linear-gradient(#FFFBF0, #F7E6CC);
-  border-radius: 0 0 50% 50%/0 0 170px 170px;
+  border-radius: 0 0 80% 80%/0 0 240px 240px;
   -webkit-box-shadow: 0px 5px 26px #DD8762;
           box-shadow: 0px 5px 26px #DD8762;
   max-width: 1400px;
@@ -507,7 +513,7 @@ body {
 }
 .main__wrap {
   padding-top: 60px;
-  padding-bottom: 90px;
+  padding-bottom: 100px;
   background: url("../img/main/main-bg.png") no-repeat top center/contain;
 }
 .main__side {
