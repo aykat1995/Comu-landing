@@ -26,7 +26,7 @@ body
   background-color: #FFFCF5
   font-family: Poppins, sans-serif
   font-weight: 500
-  font-size: 16px
+  font-size: 1rem
   color: #535359
 
 .container
@@ -165,13 +165,14 @@ body
       padding-left: 70px
       padding-right: 60px
   .section-img
-    width: 50%
+    width: 47%
+    margin: 0 30px
 
 @media(max-width: 992px)
   html
     font-size: 15px
   .container
-    max-width: 768px
+    max-width: 738px
   .flex-wrap
     &.padding-wrap
       padding-left: 30px
@@ -198,7 +199,7 @@ body
   html
     font-size: 14px
   .title
-    font-size: 1.7rem
+    font-size: 1.6rem
   .input
     padding: 12px 0 12px 20px
     &-btn
@@ -206,5 +207,10 @@ body
       font-size: 1rem
   .flex-wrap
     &.padding-wrap
-      padding-left: 10px
-      padding-right: 10px
+      padding-left: 20px
+      padding-right: 20px
+
+@media(max-width: 380px)
+  .btn
+    font-size: 0.8rem
+    padding: 9px 20px
